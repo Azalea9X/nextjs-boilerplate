@@ -1,8 +1,9 @@
-import { getProject } from "@/app/components/schemaTypes/sanity-utils"; 
+import { getProject } from "@/app/components/schemaTypes/sanity-utils";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import Nav from "@/app/navbar";
 import "../../projects.css";
+
 type Props = {
   params: {
     project: string;
@@ -12,8 +13,8 @@ type Props = {
 type Project = {
   _id: string;
   title: string;
-  content: any;
-  image: {
+  content: any; // Ideally, refine this type
+  image?: {
     asset: {
       url: string;
     };
@@ -22,23 +23,18 @@ type Project = {
 
 export default async function Project({ params }: Props) {
   try {
-    const slug = await params.project;
-    const project = await getProject(slug);
+    const slug = params.project;
+    const project: Project | null = await getProject(slug);
 
     if (!project) {
       throw new Error("Project not found");
     }
 
     return (
-      <div className="project-card prose prose-md relative
-        
-          md:left-[25rem] top-[5rem]
-          lg:left-[30rem] top-[15rem]
-          xl:translate
-      ">
+      <div className="project-card prose prose-md relative md:left-[25rem] top-[5rem] lg:left-[30rem] top-[15rem] xl:translate">
         <Nav />
         <h2 className="text-2xl extra-bold">{project.title}</h2>
-        
+
         <PortableText
           value={project.content}
           components={{
@@ -70,13 +66,13 @@ export default async function Project({ params }: Props) {
             height={300}
             className="rounded-lg object-cover w-full images"
             layout="responsive"
+            unoptimized={false}
           />
         )}
       </div>
     );
-  } catch (error) {
+  } catch (error: any) {
     console.error(error);
     return <div>Error: {error.message}</div>;
   }
 }
-
