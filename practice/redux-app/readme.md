@@ -1,1 +1,0 @@
-A tutorial app that I have messed around with that I have gotten the idea from Free Code Camp. I use a backend API which connects to the redux store that one is able to connect actions to. Instead of http://localhost:5000, you would edit and alter the axios calls to be to the backend of your choice, and, you do not need to use GraphQL either. 
