@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+
     "lint": "next lint",
     "S dev": "sanity dev",
     "S start": "sanity start",

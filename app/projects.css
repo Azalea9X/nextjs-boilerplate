@@ -5,7 +5,7 @@ html, body {
   
   @font-face {
     font-family: 'Roboto !important';
-    src: url('./../../../../fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    src: url('./../fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
     font-weight: 300 900; /* Supports font-weight between 100 and 900 */
     font-style: normal; /* Corrected - this should be normal for the regular font */
     font-display: swap;

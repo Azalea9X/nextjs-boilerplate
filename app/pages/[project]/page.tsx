@@ -1,7 +1,7 @@
-import { getPage } from "@/react-js-fullstack-practice/vercel_project_1/vercel_project_1/client/app/sanity-next-js/schemaTypes/schemaTypes/sanity-utils";
+import { getPage } from "@/app/sanity-next-js/schemaTypes/schemaTypes/sanity-utils";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
-import Nav from "@/react-js-fullstack-practice/vercel_project_1/vercel_project_1/client/app/navbar";
+import Nav from "@/app/navbar"
 import "../../projects.css";
 type Props = {
   params: {
@@ -80,6 +80,3 @@ sm: left:-[-2rem]
   }
 }
 
-function renderRichText(content: any) {
-  return <PortableText value={content} />;
-}
