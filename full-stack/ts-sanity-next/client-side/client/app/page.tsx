@@ -90,18 +90,20 @@ export default async function Home() {
                     }}
                   />
 
-                  <Link
-                    href={`/projects/${project.slug.current}`}
-                    key={project._id} // Use project._id for the key
-                    className="border-2 border-gray-500 rounded-lg p-1 hover:scale-105 hover:border-blue-500
-                  ">
+                 <Link
+  href={`/projects/${project.slug.current}`}
+  target="_blank"
+  key={project._id}
+  className="border-2 border-gray-500 rounded-lg p-1 hover:scale-105 hover:border-blue-500 transition duration-300 ease-in-out"
+>
                     {project.image && (
                       <Image
                         src={project.image.asset.url}
                         alt={project.title}
                         width={600} // Added width
                         height={400} // Added height
-                        className="rounded-lg object-cover w-full images"
+                        maxHeight={1000}
+                        className="rounded-lg object-cover w-full images img-link"
                         style={{ width: '100%', height: 'auto' }}
                       />
                     )}
