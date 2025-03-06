@@ -9,7 +9,7 @@ import { PortableText } from '@portabletext/react'
 
 export default async function Home() {
   const projects: Project[] = await getProjects();
-
+//Test
   if (!projects) {
     return <div>Loading...</div>;
   }
