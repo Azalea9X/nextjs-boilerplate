@@ -10,10 +10,23 @@ type Props = {
   };
 };
 
+type PortableTextBlock = {
+  _type: string;
+  _key: string;
+  style?: string;
+  children: {
+    _type: string;
+    _key: string;
+    text: string;
+    marks?: string[];
+  }[];
+  markDefs?: any[];
+};
+
 type Page = {
   _id: string;
   title: string;
-  content: any; // Refine this type if possible
+  content: PortableTextBlock[]; // Refined type
   image?: {
     asset: {
       url: string;
@@ -70,7 +83,7 @@ export default async function Project({ params }: Props) {
         )}
       </div>
     );
-  } catch (error: any) {
+  } catch (error: Error) {
     console.error(error);
     return <div>Error: {error.message}</div>;
   }

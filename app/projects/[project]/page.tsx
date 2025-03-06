@@ -10,10 +10,23 @@ type Props = {
   };
 };
 
+type PortableTextBlock = {
+  _type: string;
+  _key: string;
+  style?: string;
+  children: {
+    _type: string;
+    _key: string;
+    text: string;
+    marks?: string[];
+  }[];
+  markDefs?: any[];
+};
+
 type Project = {
   _id: string;
   title: string;
-  content: any; // Ideally, refine this type
+  content: PortableTextBlock[];
   image?: {
     asset: {
       url: string;
@@ -71,7 +84,7 @@ export default async function Project({ params }: Props) {
         )}
       </div>
     );
-  } catch (error: any) {
+  } catch (error: Error) {
     console.error(error);
     return <div>Error: {error.message}</div>;
   }
