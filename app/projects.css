@@ -1,0 +1,354 @@
+
+html, body {
+    font-family: 'Roboto', sans-serif; /* Added sans-serif as a fallback */
+  }
+  
+  @font-face {
+    font-family: 'Roboto !important';
+    src: url('./../../../../fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 300 900; /* Supports font-weight between 100 and 900 */
+    font-style: normal; /* Corrected - this should be normal for the regular font */
+    font-display: swap;
+  }
+  
+  
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #ffc107;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+      --primary-color: #5cabff;
+      --secondary-color: #a2a9b0;
+    }
+  }
+  
+  body {
+    color: var(--foreground);
+    background: var(--background);
+   
+   
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1 {
+    color: red;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem auto;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+  
+  h2 {
+    color: purple;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  body, html, p, h1, h2, h3, h4, h5, h6, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    transform: translate('0px', '-20% !important');
+  }
+  
+  
+  
+  /* ============================================
+      Project Styles (Mobile-First)
+      ============================================ */
+  
+  .projects {
+    margin-top: 0; /* Reset default margin */
+  }
+  
+  .project-card {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* ============================================
+      Grid Styles (Mobile-First)
+      ============================================ */
+  
+  
+  
+  
+  /* ============================================
+      Media Queries (Mobile-First Approach)
+      ============================================ */
+  
+  /* Small devices (sm: breakpoint in Tailwind, ~640px) */
+
+  @media (min-width: 300px )  {
+    .projects {
+  
+  max-width: 100vh !important;
+  
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); 
+      gap: 5rem;/* Two columns on medium screens */
+    }
+  
+    
+  body{
+    position: relative; 
+    left: -20% !important;
+  
+  
+  }
+  
+  
+  .project-card{
+    transform: translate(-15%, 0%)!important;
+    word-wrap: break-word;
+  }
+  
+  }
+  
+  /*For extra small screens 
+  400px and 600px*/
+ @media screen and (min-width:25rem) and (max-width:37.5rem) {
+    .project-card{
+        transform: translate(20%, -10%) !important;
+        word-wrap: break-word;
+   
+    }
+
+
+ nav{
+    position: relative; 
+    left: -4.9% !important;
+    top: 5% !important;
+ }
+  
+}
+
+/* For small screens 600px and 750px */
+@media screen and (min-width:37.56rem) and (max-width:46.875rem) {
+    .project-card{
+        transform: translate(-32%, -5%) !important;
+        word-wrap: break-word;
+   
+    }
+
+
+ nav{
+    position: relative; 
+    left: -3.99% !important;
+    top: 5% !important;
+ }
+  
+}
+
+/* For medium screens 751px and 902px */
+@media screen and (min-width:46.9375rem) and (max-width:53.125rem) {
+    .project-card{
+ transform: translate(-27%, 2rem) !important;
+        word-wrap: break-word;
+        
+      min-width: 90% !important; 
+   
+    }
+
+
+ nav{
+    position: relative; 
+    left: -3% !important;
+
+ }
+  
+}
+
+/* For large screens 850px and 950px */
+@media screen and (min-width:53.125rem) and (max-width:59.375rem) {
+    .project-card{
+ transform: translate(-18vw, 5rem) !important;
+        word-wrap: break-word;
+        min-width: 700px !important;
+   
+    }
+
+
+ nav{
+    position: relative; 
+    left: -1% !important;
+   top: -25% !important;
+   transform: translateY(-10%) !important;
+ }
+  
+}
+
+/* For larger screens 950px approx and 1050px */
+@media screen and (min-width:59.3751rem) and (max-width:65.625rem) {
+    .project-card{
+ transform: translate(-10.5rem, 10rem) !important;
+        word-wrap: break-word;
+        min-width: 800px !important;
+   
+    }
+
+
+ nav{
+    position: relative; 
+    left: -3% !important;
+ }
+  
+}
+
+/* For larger screens 1051px and 1160px */
+@media screen and (min-width:65.626rem) and (max-width:72.5rem) {
+    .project-card{
+
+        word-wrap: break-word;
+        min-width: 900px !important;
+   position: relative; 
+   left: 42vw !important; 
+   top: 2rem !important;
+    }
+
+
+ nav{
+    position: relative; 
+    left: -2.5% !important;
+    top: 15% !important;
+ }
+  
+}
+
+/* For larger screens 1160px and 1360*/
+@media screen and (min-width:72.61rem) and (max-width:85rem) {
+   .project-card{
+
+       word-wrap: break-word;
+       min-width: 900px !important;
+  position: relative; 
+  left: 45vw !important; 
+  top: 2rem !important;
+   }
+
+
+nav{
+   position: relative; 
+   left: -2.5% !important;
+   top: 15% !important;
+}
+ 
+}
+
+/* For larger screens 1360px and 1560*/
+@media screen and (min-width:85.1rem) and (max-width:97.5rem) {
+   .project-card{
+
+       word-wrap: break-word;
+       min-width: 1100px !important;
+  position: relative; 
+  left: 43.5vw !important; 
+  top: 2rem !important;
+   }
+
+
+nav{
+   position: relative; 
+   left: -2.5% !important;
+   top: 15% !important;
+}
+ 
+}
+
+/* For larger screens 1560px and 1760*/
+@media screen and (min-width:97.6rem) and (max-width:110rem) {
+   .project-card{
+
+       word-wrap: break-word;
+       min-width: 1200px !important;
+  position: relative; 
+  left: 44.2vw !important; 
+  top: 2rem !important;
+   }
+
+
+nav{
+   position: relative; 
+   left: -2.5% !important;
+   top: 15% !important;
+}
+ 
+}
+
+/* For larger screens 1760px and 1960*/
+@media screen and (min-width:110.1rem) and (max-width:122.5rem) {
+   .project-card{
+
+       word-wrap: break-word;
+       min-width: 1300px !important;
+  position: relative; 
+  left: 45vw !important; 
+  top: 2rem !important;
+   }
+
+
+nav{
+   position: relative; 
+   left: -2.5% !important;
+   top: 15% !important;
+}
+ 
+}
+
+/* For larger screens 1960px and 2161*/
+@media screen and (min-width:122.6rem) and (max-width:135.0625rem) {
+   .project-card{
+
+       word-wrap: break-word;
+       min-width: 1600px !important;
+  position: relative; 
+  left: 41vw !important; 
+  top: 2rem !important;
+   }
+
+
+nav{
+   position: relative; 
+   left: -2.5% !important;
+   top: 15% !important;
+}
+ 
+}
+
+
+
+
+  
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  body, html, :root, * {
+   box-sizing: border-box;
+       font-size: 16px !important;
+     }

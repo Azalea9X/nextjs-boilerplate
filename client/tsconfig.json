@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["../full-stack/ts-sanity-next/client-side/client/*"]
+    }
+  },
+  "include": ["../full-stack/ts-sanity-next/client-side/client/next-env.d.ts", "../full-stack/ts-sanity-next/client-side/client/**/*.ts", "../full-stack/ts-sanity-next/client-side/client/**/*.tsx", "../full-stack/ts-sanity-next/client-side/client/**/**/*.tsx", "../full-stack/ts-sanity-next/client-side/client/.next/types/**/*.ts"],
+  "exclude": ["../full-stack/ts-sanity-next/client-side/client/node_modules"]
+}
